@@ -57,7 +57,7 @@ class RecipeUpdateView(viewsets.ModelViewSet):
         except:
             return Response({'error':'There is no Recipe with this primary key'},status=status.HTTP_404_NOT_FOUND)
     
-class BookDeleteView(viewsets.ModelViewSet):
+class RecipeDeleteView(viewsets.ModelViewSet):
     queryset = RecipeModel.objects.all()
     serializer_class = RecipeSerializer
     def destroy(self, request, *args, **kwargs):
